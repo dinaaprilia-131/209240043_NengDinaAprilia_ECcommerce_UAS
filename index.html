@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4You Glitz Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>4You Glitz</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#kontak">Kontak</a>
+            <a href="keranjang.html">Keranjang</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Cari produk...">
+            <button id="searchButton">Cari</button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+          <h2>Glow Up Bareng 4You Glitz!</h2>
+          <p>Koleksi makeup cantik yang siap bikin kamu tampil lebih percaya diri dan bersinar setiap hari.</p>
+          <div class="hero-img">
+            <img src="MAKEUP.jpg" alt="Gambar Produk Andalan">
+          </div>
+        </div>
+      </section>
+
+    <!-- Produk Section -->
+    <section id="produk">
+        <h2>Produk Kami</h2>
+        <div class="produk-container">
+            <!-- Produk 1 -->
+            <div class="produk-item">
+                <img src="LIPCREAM.jpg" alt="Produk 1">
+                <h3>Lip Cream</h3>
+                <p>Lip cream dari 4You Glitz bikin kamu tampil manis dengan warna cantik yang tahan lama. Teksturnya ringan, nyaman dipakai seharian tanpa bikin bibir kering.</p>
+                <p class="harga">Rp 50.000</p>
+                <button class="beli-btn" data-id="1" data-nama="LIP CREAM" data-harga="50000">Beli</button>
+            </div>
+            <!-- Produk 2 -->
+            <div class="produk-item">
+                <img src="LIPGLOSS.jpg" alt="Produk 2">
+                <h3>Lip Gloss</h3>
+                <p>Lip gloss 4You Glitz bikin bibirmu tampak glossy dan segar seharian. Nggak lengket, ringan, dan nyaman dipakai sendiri atau diatas lip cream favorit kamu!.</p>
+                <p class="harga">Rp 35.000</p>
+                <button class="beli-btn" data-id="2" data-nama="LIP GLOSS" data-harga="35000">Beli</button>
+            </div>
+            <!-- Produk 3 -->
+            <div class="produk-item">
+                <img src="LIPSTICK.jpg" alt="Produk 3">
+                <h3>Lip Stick</h3>
+                <p>Lip stick 4You Glitz hadir dengan warna cantik yang intens dan tahan lama. Teksturnya creamy, nyaman dipakai dan bikin kamu makin percaya diri setiap hari.</p>
+                <p class="harga">Rp 75.000</p>
+                <button class="beli-btn" data-id="3" data-nama="LIP STICK" data-harga="75000">Beli</button>
+            </div>
+            <!-- Produk 4 -->
+            <div class="produk-item">
+                <img src="LIPTINT.jpg" alt="Produk 4">
+                <h3>Lip Tint</h3>
+                <p>Lip tint 4You Glitz kasih warna natural dengan tekstur yang ringan. Cocok buat kamu yang suka tampil natural tanpa ribet dan bikin tampilan fresh setiap hari.</p>                            
+                <p class="harga">Rp 48.000</p>
+                <button class="beli-btn" data-id="4" data-nama="LIP TINT" data-harga="48000">Beli</button>
+            </div>
+            <!-- Produk 5 -->
+            <div class="produk-item">
+                <img src="CONCEALER.jpg" alt="Produk 5">
+                <h3>Concealer</h3>
+                <p>Concealer 4You Glitz bantu nutupin noda dan mata panda dengan hasil natural. Ringan, mudah dibaur, dan tahan lama di kulit.</p>
+                <p class="harga">Rp 45.000</p>
+                <button class="beli-btn" data-id="5" data-nama="CONCEALER" data-harga="45000">Beli</button>
+            </div>
+            <!-- Produk 6 -->
+            <div class="produk-item">
+                <img src="CUSHION.jpg" alt="Produk 6">
+                <h3>Cushion</h3>
+                <p>Cushion 4You Glitz bikin wajahmu glowing natural dengan coverage ringan. Nggak bikin berat, cocok dipakai daily.</p>
+                <p class="harga">Rp 125.000</p>
+                <button class="beli-btn" data-id="6" data-nama="CUSHION" data-harga="125000">Beli</button>
+            </div>
+            <!-- Produk 7 -->
+            <div class="produk-item">
+                <img src="LOOSEPOWDER.jpg" alt="Produk 7">
+                <h3>Loose Powder</h3>
+                <p>Loose powder 4You Glitz bikin kulit halus dan bebas kilap seharian. Ringan, nyaman, dan nggak bikin crack.</p>
+                <p class="harga">Rp 85.000</p>
+                <button class="beli-btn" data-id="7" data-nama="LOOSE POWDER" data-harga="85000">Beli</button>
+            </div>
+            <!-- Produk 8 -->
+            <div class="produk-item">
+                <img src="POUCH.jpg" alt="Produk 8">
+                <h3>Pouch</h3>
+                <p>Pouch 4You Glitz, lucu dan praktis buat bawa makeup kamu kemana aja. Ringan, estetik dan muat untuk daily.</p>
+                <p class="harga">Rp 30.000</p>
+                <button class="beli-btn" data-id="8" data-nama="POUCH" data-harga="30000">Beli</button>
+            </div>
+            <!-- Produk 9 -->
+            <div class="produk-item">
+                <img src="BRUSH.jpg" alt="Produk 9">
+                <h3>Brush</h3>
+                <p>Brush 4You Glitz lembut di kulit, bikin makeup lebih rapi dan halus. Cocok untuk blending dengan hasil flawless</p>
+                <p class="harga">Rp 25.000</p>
+                <button class="beli-btn" data-id="9" data-nama="BRUSH" data-harga="25000">Beli</button>
+            </div>
+            <!-- Produk 10 -->
+            <div class="produk-item">
+                <img src="BLUSH.jpg" alt="Produk 10">
+                <h3>Blush</h3>
+                <p>Blush 4You Glitz kasih pipi merona natural, bikin wajahmu fresh sepanjang hari. Mudah dibaur, warnanya cantik.</p>
+                <p class="harga">Rp 40.000</p>
+                <button class="beli-btn" data-id="10" data-nama="BLUSH" data-harga="40000">Beli</button>
+            </div>
+            <!-- Produk 11 -->
+            <div class="produk-item">
+                <img src="EYESHADOW.jpg" alt="Produk 11">
+                <h3>Eyeshadow</h3>
+                <p>Eyeshadow 4You Glitz dengan warna cantik untuk look natural atau glam. Pigmented, mudah dibaur, tahan lama.</p>
+                <p class="harga">Rp 70.000</p>
+                <button class="beli-btn" data-id="11" data-nama="EYESHADOW" data-harga="70000">Beli</button>
+            </div>
+            <!-- Produk 12 -->
+            <div class="produk-item">
+                <img src="MASCARA.jpg" alt="Produk 12">
+                <h3>Mascara</h3>
+                <p>Mascara 4You Glitz bikin bulu matamu lentik dan tebal tanpa clumpy. Tahan lama, bikin mata terlihat lebih hidup.</p>
+                <p class="harga">Rp 27.000</p>
+                <button class="beli-btn" data-id="12" data-nama="MASCARA" data-harga="27000">Beli</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami untuk pemesanan dan informasi lebih lanjut.</p>
+        <p>Email: dinaaprilia1345@gmail.com</p>
+        <p>WhatsApp: 089636770214</p>
+        <p>Bandung, Indonesia</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 4You Glitz. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Checkout -->
+<div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Checkout</h3>
+      <form id="checkoutForm">
+        <label>Nama Lengkap:</label>
+        <input type="text" required>
+  
+        <label>Alamat Pengiriman:</label>
+        <input type="text" required>
+  
+        <label>Nomor Telepon:</label>
+        <input type="text" required>
+  
+        <label>Shade:</label>
+        <select required>
+          <option value="">01 butter</option>
+          <option value="02">02 creamy</option>
+          <option value="03">03 honey</option>
+          <option value="04">04 natural</option>
+        </select>
+  
+        <label>Metode Pembayaran:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="pembayaran" required> Credit Card</label>
+          <label><input type="radio" name="pembayaran"> Virtual Account</label>
+          <label><input type="radio" name="pembayaran"> QRIS</label>
+          <label><input type="radio" name="pembayaran"> E-Wallet</label>
+        </div>
+  
+        <button type="submit" class="bayar-btn">Bayar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

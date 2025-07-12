@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja | 4You Glitz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <section id="keranjang">
+        <h2 style="text-align: center; margin: 2rem 0; color: #d946ef;">Keranjang Belanja</h2>
+        <div id="keranjangList"></div>
+      </section>
+    <header>
+        <h1>4You Glitz</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#produk">Produk</a>
+            <a href="index.html#kontak">Kontak</a>
+            <a href="keranjang.html">Keranjang</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari produk...">
+            <button>Cari</button>
+        </div>
+    </header>
+
+    <!-- Isi Keranjang -->
+    <section id="keranjang" style="padding: 2rem; text-align: center;">
+        <h2>Produk di Keranjang Kamu</h2>
+        <div id="keranjangList" style="margin-top: 2rem;"></div>
+        <p id="totalHarga" style="font-weight: bold; margin-top: 1.5rem;"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 4You Glitz. All rights reserved.</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const keranjangData = JSON.parse(localStorage.getItem("keranjang")) || [];
+            const keranjangList = document.getElementById("keranjangList");
+            const totalHargaEl = document.getElementById("totalHarga");
+
+            if (keranjangData.length === 0) {
+                keranjangList.innerHTML = "<p>Keranjang kamu masih kosong.</p>";
+                totalHargaEl.textContent = "";
+                return;
+            }
+
+            let total = 0;
+            keranjangList.innerHTML = keranjangData.map(item => {
+                total += parseInt(item.harga);
+                return `
+                    <div style="margin-bottom: 1rem; font-size: 1rem;">
+                        <strong>${item.nama}</strong> - Rp ${item.harga}
+                    </div>
+                `;
+            }).join("");
+
+            totalHargaEl.textContent = "Total: Rp " + total.toLocaleString("id-ID");
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const keranjangList = document.getElementById("keranjangList");
+      
+          // Ambil data dari localStorage
+          let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+      
+          if (keranjang.length === 0) {
+            keranjangList.innerHTML = "<p style='text-align: center;'>Keranjang kamu masih kosong.</p>";
+          } else {
+            keranjang.forEach(item => {
+              const produkEl = document.createElement("div");
+              produkEl.innerHTML = `
+                <h3 style="color: #ec4899;">${item.nama}</h3>
+                <p>Harga: Rp ${item.harga.toLocaleString()}</p>
+              `;
+              keranjangList.appendChild(produkEl);
+            });
+          }
+        });
+      </script>
+      <script src="keranjang.js"></script>
+</body>
+</html>
